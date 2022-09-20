@@ -334,9 +334,9 @@ class AAChartView : WebView {
 
     private fun safeEvaluateJavaScriptString(javaScriptString: String) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            evaluateJavascript("javascript:$javaScriptString") { 
+            //evaluateJavascript("javascript:$javaScriptString") { 
                 //Log.i("call back information","输出打印查看回调的结果"+ it);
-            }
+            //}
         } else {
             loadUrl("javascript:$javaScriptString")
         }
