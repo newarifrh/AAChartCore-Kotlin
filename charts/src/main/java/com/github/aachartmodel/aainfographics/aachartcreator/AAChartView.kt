@@ -102,14 +102,18 @@ class AAChartView : WebView {
     constructor(
         context: Context
     ) : super(context) {
-        setupBasicContent()
+        if(!isInEditMode()){
+            setupBasicContent()
+        }
     }
 
     constructor(
         context: Context,
         attrs: AttributeSet?
     ) : super(context, attrs) {
-        setupBasicContent()
+        if(!isInEditMode()){
+            setupBasicContent()
+        }
     }
 
     constructor(
@@ -117,7 +121,9 @@ class AAChartView : WebView {
         attrs: AttributeSet?,
         defStyleAttr: Int
     ) : super(context, attrs, defStyleAttr) {
-        setupBasicContent()
+        if(!isInEditMode()){
+            setupBasicContent()
+        }
     }
 
     @SuppressLint("SetJavaScriptEnabled")
